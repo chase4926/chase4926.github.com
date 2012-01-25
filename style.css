@@ -4,10 +4,10 @@ a.navbar1:visited {color:#c8c8c8;text-decoration:none;}
 a.navbar1:hover {color:#FFFFFF;text-decoration:underline;}
 a.navbar1:active {color:#FFFFFF;text-decoration:underline;}
 
-a:link {color:white;text-decoration:none;}
-a:visited {color:white;text-decoration:none;}
-a:hover {color:white;text-decoration:underline;}
-a:active {color:white;text-decoration:underline;}
+a:link {color:#FF9696;text-decoration:none;}
+a:visited {color:#FF9696;text-decoration:none;}
+a:hover {color:#FF9696;text-decoration:underline;}
+a:active {color:#FF9696;text-decoration:underline;}
 
 table
 { 
