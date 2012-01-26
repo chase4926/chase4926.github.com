@@ -1,13 +1,3 @@
 
-<title>Prodigiosus Games-Indie Game Dev</title>
-<link rel="stylesheet" href="style.css" type="text/css">
-p=. !logo.png!
-
-p=. *"(navbar1). Home":index.html - "(navbar1). Lighting Library":lighting_lib.html - "(navbar1). Staff":staff.html*
-
 |Welcome to Prodigiosus-Games!|
 |Our current project is "Wayback":wayback.html, a top-down rpg game for a "national competition":http://bpatechnical.org/.|
-
-p. 
-
-p=. (c) Chase Arnold 2012

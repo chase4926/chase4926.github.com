@@ -16,12 +16,28 @@ def search_directory(folder='.', search_for='*')
 end
 
 
+header = ''
+File.open('../redcloth/header.template','r') do |file|
+  header = file.read
+end
+footer = ''
+File.open('../redcloth/footer.template','r') do |file|
+  footer = file.read
+end
+
+
 file_paths = search_directory('../redcloth', '*.txt')
 file_paths.each do |path|
-  redcloth_html = ''
+  content = ''
   File.open(path, 'r') do |file|
-    redcloth_html = RedCloth.new(file.read).to_html
+    content = file.read
   end
+wrapper =<<END
+#{header}
+#{content}
+#{footer}
+END
+  redcloth_html = RedCloth.new(wrapper).to_html
   File.open("../#{path.split('/').last.split('.txt')[0]}.html",'w+') do |file|
     file.print redcloth_html
   end
