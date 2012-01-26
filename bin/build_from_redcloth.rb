@@ -33,10 +33,12 @@ file_paths.each do |path|
     content = file.read
   end
 wrapper =<<END
+#{content.split("\n").first}
 #{header}
 #{content}
 #{footer}
 END
+  content = content.split("\n", 2)[1]
   redcloth_html = RedCloth.new(wrapper).to_html
   File.open("../#{path.split('/').last.split('.txt')[0]}.html",'w+') do |file|
     file.print redcloth_html
