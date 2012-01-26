@@ -16,13 +16,21 @@ def search_directory(folder='.', search_for='*')
 end
 
 
-header = ''
-File.open('../redcloth/header.template','r') do |file|
-  header = file.read
+def wrap_it_up(title, header, content, footer)
+return <<END
+<html>
+#{title}
+#{header}
+#{content}
+#{footer}
+</html>
+END
 end
-footer = ''
-File.open('../redcloth/footer.template','r') do |file|
-  footer = file.read
+
+def get_template(template)
+  File.open("../redcloth/#{template}.template",'r') do |file|
+    return file.read
+  end
 end
 
 
@@ -32,14 +40,10 @@ file_paths.each do |path|
   File.open(path, 'r') do |file|
     content = file.read
   end
-wrapper =<<END
-#{content.split("\n").first}
-#{header}
-#{content}
-#{footer}
-END
-  content = content.split("\n", 2)[1]
+  title, content = content.split("\n", 2)
+  wrapper = wrap_it_up(title, get_template('header'), content, get_template('footer'))
   redcloth_html = RedCloth.new(wrapper).to_html
+  redcloth_html.gsub!("\t",'  ')
   File.open("../#{path.split('/').last.split('.txt')[0]}.html",'w+') do |file|
     file.print redcloth_html
   end

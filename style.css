@@ -46,23 +46,10 @@ header#page_header nav ul, #page_footer nav ul{
   margin: 0 20px 0 0;
   display: inline;
 }
-section#posts{
-  float: left;
-  width: 74%
-}
-
-section#posts aside{
-  float: right;
-  width: 35%;
-  margin-left: 5%;
-  font-size: 20px;
-  line-height: 40px;
-}
 section#sidebar{
   float: left;
   width: 25%;
 }
-
 footer#page_footer{
   clear: both;
   width: 100%;
