@@ -1,5 +1,10 @@
 
 <link rel="stylesheet" href="style.css" type="text/css">
+
 p=. !logo.png!
 
+<nav>
+
 p=. *"(navbar1). Home":index.html - "(navbar1). Lighting Library":lighting_lib.html - "(navbar1). Staff":staff.html*
+
+</nav>

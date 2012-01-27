@@ -32,6 +32,11 @@ def read_file(path)
   end
 end
 
+def clean_html(html)
+  # This attempts to make the code look neat & clean, aswell as fixing some of redcloth's downfalls
+  return html.gsub("\t",'  ').gsub("\n\n","\n").gsub('<p></p>','<br />')
+end
+
 
 file_paths = search_directory('../redcloth', '*.txt')
 file_paths.each do |path|
@@ -40,9 +45,7 @@ file_paths.each do |path|
                        read_file('../redcloth/header.template'),
                        content,
                        read_file('../redcloth/footer.template'))
-  redcloth_html = RedCloth.new(wrapper).to_html
-  redcloth_html.gsub!("\t",'  ')
   File.open("../#{path.split('/').last.split('.txt')[0]}.html",'w+') do |file|
-    file.print redcloth_html
+    file.print clean_html(RedCloth.new(wrapper).to_html)
   end
 end
