@@ -5,6 +5,6 @@ p=. !logo.png!
 
 <nav>
 
-p=. *"(navbar1). Home":index.html - "(navbar1). Lighting Library":lighting_lib.html - "(navbar1). Staff":staff.html*
+p=. *"(navbar1). Home":index.html - "(navbar1). Summoning of the Sword":sots_game.html - "(navbar1). Lighting Library":lighting_lib.html - "(navbar1). Staff":staff.html*
 
 </nav>
