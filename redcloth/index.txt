@@ -1,3 +1,4 @@
 <title>Prodigiosus-Games: Home</title>
-|{text-align:center}. Welcome to Prodigiosus-Games!|
-|<script type=”text/javascript” src=”http://chase4926.tumblr.com/js”>|
+|{text-align:center}. **Welcome to Prodigiosus-Games!**|
+|<br>What we have been up to:|
+|<script type="text/javascript" src="http://chase4926.tumblr.com/js"></script>|
