@@ -1,4 +1,5 @@
 <title>Prodigiosus-Games: SotS</title>
+table{border:2px solid #666;background:#333}.
 |Project is done, submitted on Feb. 1st, 2012|
 |In April, 2012, we attended the award ceremony and took 1st place in the SET National Competition|
 |<img src="./images/award_image_1.png" alt="1st Place Plaques" />|
