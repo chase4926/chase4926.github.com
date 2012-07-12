@@ -1,5 +1,5 @@
 <title>Prodigiosus-Games: Home</title>
-table{border:2px solid #666;background:#333}.
+table{border:2px solid #555;background:#222}.
 |{text-align:center}. **Welcome to Prodigiosus-Games!**|
 |<br>What we have been up to:|
 |<script type="text/javascript" src="http://chase4926.tumblr.com/js"></script>|
