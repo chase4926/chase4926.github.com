@@ -4,7 +4,7 @@
 p=. !logo.png!
 
 <nav>
-table{border:2px solid #444;background:#111}.
+table{background:#111}.
 |{text-align:center}.*"(navbar1). Home":index.html - "(navbar1). Summoning of the Sword":sots_game.html - "(navbar1). Lighting Library":lighting_lib.html - "(navbar1). Staff":staff.html*|
-<br>
 </nav>
+<br>

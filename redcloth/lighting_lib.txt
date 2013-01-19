@@ -1,4 +1,4 @@
 <title>Prodigiosus-Games: Lighting Lib</title>
-table{border:2px solid #555;background:#222}.
+table.
 |"Playable Test":downloads/lighting_test.zip|
 |"Latest Verion":downloads/lib_lighting.zip|
