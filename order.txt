@@ -1,1 +1,1 @@
-Home.md,*
+index.md,*
