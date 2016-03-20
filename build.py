@@ -62,11 +62,10 @@ for item in after_list:
 for index, item in enumerate(root_list):
   new_root_list[wild_index+index] = item
 root_list = new_root_list
-#print(root_list)
 
 
 ## Build the navbar ##
-navbar_list = ["[{}](/{}/)".format(f.split('.')[0], f.split('.')[0]) for f in root_list]
+navbar_list = ["[{}](/{})".format(f.split('.')[0], f.split('.')[0]) for f in root_list]
 navbar = " - ".join(navbar_list)
 
 
@@ -74,11 +73,16 @@ navbar = " - ".join(navbar_list)
 link_list = []
 for page in root_list:
   title = page.split(".")[0]
-  link_list.append([title, "[{}](/{}/)".format(title, title)])
+  link_list.append([title, "[{}](/{})".format(title, title)])
 for page in branch_list:
   title = page.split(".")[0]
-  link_list.append([title, "[{}](/{}/)".format(title, title)])
-#print(link_list)
+  link_list.append([title, "[{}](/{})".format(title, title)])
+
+
+## Delete old pages ##
+for old_file in os.listdir('.'):
+  if os.path.isfile(old_file) and old_file.split('.')[1] == "html":
+    os.remove(old_file)
 
 
 ## Build the pages ##
