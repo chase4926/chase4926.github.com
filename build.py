@@ -65,7 +65,14 @@ root_list = new_root_list
 
 
 ## Build the navbar ##
-navbar_list = ["[{}](/{})".format(f.split('.')[0], f.split('.')[0]) for f in root_list]
+#navbar_list = ["[{}](/{})".format(f.split('.')[0], f.split('.')[0]) for f in root_list]
+navbar_list = []
+for page in root_list:
+  title = page.split('.')[0]
+  if title == "Home":
+    navbar_list.append("[Home](/index)")
+  else:
+    navbar_list.append("[{}](/{})".format(title, title))
 navbar = " - ".join(navbar_list)
 
 
@@ -73,10 +80,15 @@ navbar = " - ".join(navbar_list)
 link_list = []
 for page in root_list:
   title = page.split(".")[0]
-  link_list.append([title, "[{}](/{})".format(title, title)])
+  if title == "Home":
+    # Fix the Home link
+    link_list.append(["Home", "[Home](/index)"])
+  else:
+    link_list.append([title, "[{}](/{})".format(title, title)])
 for page in branch_list:
   title = page.split(".")[0]
   link_list.append([title, "[{}](/{})".format(title, title)])
+
 
 
 ## Delete old pages ##
@@ -89,9 +101,13 @@ for old_file in os.listdir('.'):
 year = time.strftime("%Y")
 for page in root_list:
   title = page.split(".")[0]
+  if title == "Home":
+    filename = "index.html"
+  else:
+    filename = "{}.html".format(title)
   content = read_root(page)
   content = fill_links(content, link_list)
-  build_page("{}.html".format(title), title, navbar, content, year)
+  build_page(filename, title, navbar, content, year)
 for page in branch_list:
   title = page.split(".")[0]
   content = read_branch(page)
