@@ -1,5 +1,0 @@
-<title>Prodigiosus-Games: Home</title>
-table.
-|<h1>News:</h1>|
-|<hr /><br />|
-|<script type="text/javascript" src="http://chase4926.tumblr.com/js"></script>|

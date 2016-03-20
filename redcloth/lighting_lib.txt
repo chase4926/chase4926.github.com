@@ -1,4 +1,0 @@
-<title>Prodigiosus-Games: Lighting Lib</title>
-table.
-|"Playable Test":downloads/lighting_test.zip|
-|"Latest Verion":downloads/lib_lighting.zip|
