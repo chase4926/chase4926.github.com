@@ -11,11 +11,12 @@ nav#navbar1 a:active {color:#FFFFFF;text-decoration:underline;}
 
 nav#navbar1{
   text-align: center;
-  padding: 10px;
+  padding: 0px;
   margin: 15px auto;
   border: 2px solid #555;
   border-radius: 10px;
   background: #111;
+  font-size: 1.2em;
 }
 
 table{
