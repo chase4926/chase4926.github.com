@@ -22,11 +22,11 @@ def read_branch(branch_name):
 def build_page(filename, title, navbar, content, year):
   output = str(template)
   output = output.replace("{title}", title)
-  output = output.replace("{navbar}", navbar)
-  output = output.replace("{content}", content)
+  # Convert navbar to HTML
+  output = output.replace("{navbar}", markdown(navbar))
+  # Convert content to HTML
+  output = output.replace("{content}", markdown(content))
   output = output.replace("{year}", str(year))
-  # Convert output to HTML
-  output = markdown(output)
   # Clean HTML
   output = BeautifulSoup(output, "html.parser").prettify()
   with open(filename, "w+") as f:
