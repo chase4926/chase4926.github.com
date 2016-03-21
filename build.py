@@ -2,6 +2,8 @@
 
 import os, time
 from markdown import markdown
+# HTML Cleaning
+from bs4 import BeautifulSoup
 
 # Make sure we're in the right directory
 os.chdir(os.path.dirname(os.path.realpath(__file__)))
@@ -23,8 +25,12 @@ def build_page(filename, title, navbar, content, year):
   output = output.replace("{navbar}", navbar)
   output = output.replace("{content}", content)
   output = output.replace("{year}", str(year))
+  # Convert output to HTML
+  output = markdown(output)
+  # Clean HTML
+  output = BeautifulSoup(output, "html.parser").prettify()
   with open(filename, "w+") as f:
-    f.write(markdown(output))
+    f.write(output)
 
 def fill_links(content, link_list):
   for link in link_list:
@@ -65,7 +71,6 @@ root_list = new_root_list
 
 
 ## Build the navbar ##
-#navbar_list = ["[{}](/{})".format(f.split('.')[0], f.split('.')[0]) for f in root_list]
 navbar_list = []
 for page in root_list:
   title = page.split('.')[0]
