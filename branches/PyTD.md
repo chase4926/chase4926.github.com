@@ -1,5 +1,2 @@
 
-
-See GitHub
-
-So obviously this page isn't finished yet, check back later.
+See the [Github project page](https://github.com/chase4926/PyTD) for the source and more information.

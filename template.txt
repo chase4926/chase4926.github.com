@@ -1,7 +1,11 @@
-<html>
+<!doctype html>
+<html lang="en-US">
+<head>
 <title>{title}</title>
 <link rel="stylesheet" href="style.css" type="text/css">
-<p style="text-align:center;"><img src="logo.png" alt="" /></p>
+</head>
+<body>
+<p style="text-align:center;"><img src="logo.png" alt="chase4926.github.com" /></p>
 <nav id="navbar1">
 {navbar}
 </nav>
@@ -15,4 +19,5 @@
 <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
 </form>
 <p style="text-align:center;">&#169; Chase Arnold {year}</p>
+</body>
 </html>
